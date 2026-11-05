@@ -31,10 +31,21 @@
  *     Justify your choice in short_answer.txt.
  */
 std::vector<std::string> get_applicants(const std::string& filename) {
-  // STUDENT TODO: Implement this function.
-  throw std::runtime_error("Not implemented: get_applicants");
-}
+        // STUDENT TODO: Implement this function.
+    //throw std::runtime_error("Not implemented: get_applicants");
+    std::ifstream file(filename);
+    std::vector<std::string> vec;
+    vec.reserve(1000);
+    
+    std::string line;
+    while(std::getline(file,line)){
+        vec.push_back(line);
+        
+        
+    }
 
+    return vec;
+}
 /**
  * Returns the initials of `name`, uppercased.
  *   e.g. initials("Marceline McMillan") == "MM"
